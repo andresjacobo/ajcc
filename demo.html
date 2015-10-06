@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ajcc Demo</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+	<link href="ajcc.css" rel="stylesheet" title="CSS" type="text/css"/>
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="ajcc.js"></script>
+    <script>
+function initialize() {
+  
+  console.log("heell");
+  var card = new ajcc.Card($("#card"),
+                             $("#cc_number"),
+                             $("#cc_name"),
+                             $("#cc_month"),
+                             $("#cc_year"),
+                             $("#cc_cvc"),
+                             [ajcc.getVisaCardVendor("images/visa.png"),ajcc.getMasterCardCardVendor("images/mastercard.png"),ajcc.getAmexCardVendor("images/amex.png")],
+                             "images/chip.png",
+                             "images/default.png");
+};
+
+$(document).ready(initialize);
+
+    </script>
+  </head>
+  <body>
+  	<form>
+    	<div id="card" style='margin: 20px;position: relative;'></div>
+    	<input id="cc_name" name="cc_name" aria-label="Cardholder Name" placeholder="Cardholder Name" type="text">
+    	<input id="cc_number" name="cc_number" aria-label="Card Number" placeholder="Card Number" type="text">
+    	<select id="cc_month" name="cc_month" aria-label="Credit Card Expiration Month">
+                            
+                                <option value="1">1</option>
+                            
+                                <option value="2">2</option>
+                            
+                                <option value="3">3</option>
+                            
+                                <option value="4">4</option>
+                            
+                                <option value="5">5</option>
+                            
+                                <option value="6">6</option>
+                            
+                                <option value="7">7</option>
+                            
+                                <option value="8">8</option>
+                            
+                                <option value="9">9</option>
+                            
+                                <option value="10">10</option>
+                            
+                                <option value="11">11</option>
+                            
+                                <option value="12">12</option>
+                            
+		</select>
+		<select id="cc_year" name="cc_year" aria-label="Credit Card Expiration Year">
+                            
+                                <option value="2015">2015</option>
+                            
+                                <option value="2016">2016</option>
+                            
+                                <option value="2017">2017</option>
+                            
+                                <option value="2018">2018</option>
+                            
+                                <option value="2019">2019</option>
+                            
+                                <option value="2020">2020</option>
+                            
+                                <option value="2021">2021</option>
+                            
+                                <option value="2022">2022</option>
+                            
+                                <option value="2023">2023</option>
+                            
+                                <option value="2024">2024</option>
+                            
+                                <option value="2025">2025</option>
+                            
+                                <option value="2026">2026</option>
+                            
+                                <option value="2027">2027</option>
+                            
+                                <option value="2028">2028</option>
+                            
+                                <option value="2029">2029</option>
+                            
+        </select>
+        <input id="cc_cvc" name="cc_cvc" aria-label="Credit Card CVC" placeholder="CVC" type="text">
+    	<button type='reset'>Reset</button>
+    </form>
+  </body>
+</html>
